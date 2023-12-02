@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowRight from "../../assets/icons/arrow-right.svg?react";
+import ArrowRight from "../../assets/icons/btn-arrow-right.svg?react";
 
 export const Heading = styled.h1`
   width: 320px;

@@ -10,11 +10,17 @@ import {
   Item,
   IconArrowUp,
   WrapIcon,
-  IconSwiperPrev,
-  IconSwiperNext,
   SliderControler,
   Info,
   WrapInfo,
+  Container,
+  Counter,
+  IconSwiperPrev,
+  IconSwiperNext,
+  Name,
+  Date,
+  WrapDetails,
+  Wrapper,
 } from "./Slider.styled";
 
 import wind_power from "../../assets/pictures/wind_power.jpg";
@@ -27,11 +33,22 @@ const Slider = () => {
   const [totalSlides, setTotalSlides] = useState(0);
   return (
     <div>
-      <div>{totalSlides}</div>
+      <Container>
+        <Counter>{totalSlides}</Counter>
+        <SliderControler>
+          <div className="swiper-btn-prev">
+            <IconSwiperPrev />
+          </div>
+
+          <div className="swiper-btn-next">
+            <IconSwiperNext />
+          </div>
+        </SliderControler>
+      </Container>
+
       <Swiper
         modules={[Navigation, A11y]}
         //   spaceBetween={24}
-        grabCursor={true}
         slidesPerView={"auto"}
         loop={true}
         navigation={{
@@ -46,86 +63,116 @@ const Slider = () => {
         }}
         className="sweiper-container"
       >
-        <SliderControler>
-          <div className="swiper-btn-prev">
-            <IconSwiperPrev />
-          </div>
-
-          <div className="swiper-btn-next">
-            <IconSwiperNext />
-          </div>
-        </SliderControler>
         <ul>
           <SwiperSlide>
             <Item>
               <img src={wind_power} alt="Wind Power" />
-              <div>
+              <Wrapper>
                 <WrapInfo>
                   <Info>
-                    Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI
-                    BUH”
+                    Lviv Region, Radekhiv town <br />
+                    Private Enterprise “ZAKHIDNYI BUH”
                   </Info>
 
                   <WrapIcon>
                     <IconArrowUp />
                   </WrapIcon>
                 </WrapInfo>
-
-                <div>Wind Power for auto field irrigation</div>
-                <div>July 2023</div>
-              </div>
+                <WrapDetails>
+                  <Name>Wind Power for auto field irrigation</Name>
+                  <Date>July 2023</Date>
+                </WrapDetails>
+              </Wrapper>
             </Item>
           </SwiperSlide>
+
           <SwiperSlide>
             <Item>
               <img src={solar_panels} alt="Solar Panels" />
-              <div>Zhytomyr city</div>
-              <div>Private Enterprise “Bosch”</div>
-              <div>
-                <IconArrowUp />
-              </div>
+              <Wrapper>
+                <WrapInfo>
+                  <Info>
+                    Zhytomyr city <br />
+                    Private Enterprise “Bosch”
+                  </Info>
 
-              <div>Solar Panels for industrial use</div>
-              <div>November 2023</div>
+                  <WrapIcon>
+                    <IconArrowUp />
+                  </WrapIcon>
+                </WrapInfo>
+                <WrapDetails>
+                  <Name>Solar Panels for industrial use</Name>
+                  <Date>November 2023</Date>
+                </WrapDetails>
+              </Wrapper>
             </Item>
           </SwiperSlide>
+
           <SwiperSlide>
             <Item>
               <img src={thermal_modules} alt="Thermal Modules" />
-              <div>Rivne city</div>
-              <div>Private Enterprise “Biotech”</div>
-              <div>
-                <IconArrowUp />
-              </div>
 
-              <div>Thermal modules</div>
-              <div>October 2023</div>
+              <Wrapper>
+                <WrapInfo>
+                  <Info>
+                    Rivne city <br />
+                    Private Enterprise “Biotech”
+                  </Info>
+
+                  <WrapIcon>
+                    <IconArrowUp />
+                  </WrapIcon>
+                </WrapInfo>
+                <WrapDetails>
+                  <Name>Thermal modules</Name>
+                  <Date>October 2023</Date>
+                </WrapDetails>
+              </Wrapper>
             </Item>
           </SwiperSlide>
+
           <SwiperSlide>
             <Item>
               <img src={wind_power_kh} alt="Wind Power Kherson" />
-              <div>Kherson city</div>
-              <div>Private Enterprise “HealthyFarm”</div>
-              <div>
-                <IconArrowUp />
-              </div>
 
-              <div>Wind power</div>
-              <div>September 2021</div>
+              <Wrapper>
+                <WrapInfo>
+                  <Info>
+                    Kherson city <br />
+                    Private Enterprise “HealthyFarm”
+                  </Info>
+
+                  <WrapIcon>
+                    <IconArrowUp />
+                  </WrapIcon>
+                </WrapInfo>
+                <WrapDetails>
+                  <Name>Wind power</Name>
+                  <Date>September 2021</Date>
+                </WrapDetails>
+              </Wrapper>
             </Item>
           </SwiperSlide>
           <SwiperSlide>
             <Item>
               <img src={nuclear_stations} alt="Mini nuclear stations" />
-              <div>Zaporizhia city</div>
-              <div>Private Enterprise “Biotech”</div>
-              <div>
-                <IconArrowUp />
-              </div>
 
-              <div>Mini nuclear stations</div>
-              <div>May 2021</div>
+              <Wrapper>
+                <WrapInfo>
+                  <Info>
+                    Zaporizhia cit <br />
+                    Private Enterprise “Biotech”
+                  </Info>
+
+                  <WrapIcon>
+                    <IconArrowUp />
+                  </WrapIcon>
+                </WrapInfo>
+                <WrapDetails>
+                  <Name>Mini nuclear stations</Name>
+                  <Date>May 2021</Date>
+                </WrapDetails>
+              </Wrapper>
             </Item>
           </SwiperSlide>
         </ul>

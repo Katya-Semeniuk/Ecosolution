@@ -5,8 +5,9 @@ export const Title = styled.h2`
   text-align: center;
   font-size: 28px;
   margin: 0 auto 96px auto;
-  position: relative;
   line-height: 1;
+  position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -14,7 +15,6 @@ export const Title = styled.h2`
     height: 48px;
     background-color: var(--primary-green-color);
     bottom: calc(-85% - 24px);
-
     left: 50%;
   }
 `;
