@@ -1,0 +1,53 @@
+:root {
+  --text-dark-color: #173d33;
+  --text-grey-color: #828382;
+
+  --primary-green-color: #97d28b;
+  --accent-green-color: #4ebb94;
+  --light-green-color: #dcefd8;
+  --white-color: #ffffff;
+  --secondary-backgr-color: #eaedf1;
+
+  --primary-logo-color: #674fd3;
+  --accent-logo-color: #471ca9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: var(--text-dark-color);
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  margin: 24px 20px;
+  min-width: 360px;
+  min-height: 100vh;
+  border: 1px solid red;
+  background-color: var(--white-color);
+  color: var(--text-dark-color);
+}
